@@ -100,7 +100,8 @@ print("\n--- INICIANDO EXTRACCIÓN 1: DATOS DEMOGRÁFICOS ---")
 params_demo = {
     'level': 'ad',
     'time_range': time_range_dict,
-    'breakdowns': ['age', 'gender']  # Combinación válida
+    'breakdowns': ['age', 'gender'],  # Combinación válida
+    'time_increment': 1,  # ### Incremento de dia uno por vez ###
 }
 df_demographics = fetch_and_process_insights(ad_account, fields_to_request, params_demo)
 
@@ -110,7 +111,8 @@ print("\n--- INICIANDO EXTRACCIÓN 2: DATOS GEOGRÁFICOS ---")
 params_geo = {
     'level': 'ad',
     'time_range': time_range_dict,
-    'breakdowns': ['country', 'region'] # Combinación válida
+    'breakdowns': ['country', 'region'],  # Combinación válida
+    'time_increment': 1,  # ### Incremento de dia uno por vez ###
 }
 df_geographics = fetch_and_process_insights(ad_account, fields_to_request, params_geo)
 
@@ -120,7 +122,8 @@ print("\n--- INICIANDO EXTRACCIÓN 3: DATOS DE UBICACIÓN ---")
 params_placement = {
     'level': 'ad',
     'time_range': time_range_dict,
-    'breakdowns': ['publisher_platform', 'device_platform'] # Combinación válida
+    'breakdowns': ['publisher_platform', 'device_platform'],  # Combinación válida
+    'time_increment': 1,  # ### Incremento de dia uno por vez ###
 }
 df_placements = fetch_and_process_insights(ad_account, fields_to_request, params_placement)
 
