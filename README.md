@@ -146,8 +146,11 @@ Conectar a Power BI: Abre Power BI Desktop. Obtener Datos -> Texto o CSV. Selecc
 ## Fase 8: Sincronización Automatica de tablero (Gateway de datos local)
 En Power BI Service (la nube): Publica tu informe de Power BI. Necesitarás instalar un "Gateway de datos local" en tu PC. Este programa actúa como un puente seguro entre Power BI en la nube y los archivos en tu ordenador. Configura una actualización programada en Power BI Service para tu conjunto de datos, diciéndole que se actualice cada día a las 7:00 AM (después de que tu script se haya ejecutado).
 
+___
 > Si en tu empresa u organización se presenta el caso que se menciona en líneas anteriores y deseas agregar valor a tu organización mediante este tipo de herramientas, para facilitar la gestión de tus operaciones, implementar indicadores o mejorar el análisis de los que ya posees, no dudes en contactarme y con todo gusto te estaré brindado el apoyo que necesitas.
 
-Ing. Nestor Santos Paredes
+[Ing. Nestor Santos Paredes](https://www.linkedin.com/in/ingnsantos/)
+
 "Business Intelligence Consultant"
-Whatsapp: wa.me/+584128672812 | e-mail: nsantos.ks@gmail.com
+
+Whatsapp: [+58 412 867.28.12](wa.me/+584128672812) | e-mail: nsantos.ks@gmail.com
