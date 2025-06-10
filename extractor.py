@@ -5,17 +5,17 @@ from facebook_business.adobjects.adaccount import AdAccount
 from datetime import datetime, timedelta
 import os
 
-# --- CONFIGURACIÓN DE SEGURIDAD (Tu código original, está perfecto) ---
-my_app_id = os.environ.get('FACEBOOK_APP_ID_ALLEXCELUP')
-my_app_secret = os.environ.get('FACEBOOK_APP_SECRET_ALLEXCELUP')
-my_access_token = os.environ.get('FACEBOOK_ACCESS_TOKEN_ALLEXCELUP')
-ad_account_id = os.environ.get('FACEBOOK_AD_ACCOUNT_ID_ALLEXCELUP')
+# --- CONFIGURACIÓN DE SEGURIDAD (Variables de Entorno del Sistema) ---
+my_app_id = os.environ.get('APP_ID')
+my_app_secret = os.environ.get('APP_SECRET')
+my_access_token = os.environ.get('ACCESS_TOKEN')
+ad_account_id = os.environ.get('AD_ACCOUNT_ID')
 
 if not all([my_app_id, my_app_secret, my_access_token, ad_account_id]):
     print("Error: Una o más variables de entorno no están configuradas.")
     exit()
     
-# 2. INICIALIZACIÓN DE LA API (Tu código original, está perfecto) ---
+# 2. INICIALIZACIÓN DE LA API (Conectamos con Facebook) ---
 try:
     FacebookAdsApi.init(my_app_id, my_app_secret, my_access_token)
     print("Conexión con la API de Facebook exitosa.")
@@ -24,7 +24,7 @@ except Exception as e:
     exit()
 
 # ==============================================================================
-# ### NUEVO: UNA FUNCIÓN REUTILIZABLE PARA EXTRAER Y PROCESAR DATOS ###
+# ### FUNCIÓN REUTILIZABLE PARA EXTRAER Y PROCESAR DATOS ###
 # Creamos una función para no repetir el mismo código una y otra vez.
 # Esta función hará una llamada a la API y convertirá el resultado en una tabla (DataFrame).
 # ==============================================================================
@@ -40,7 +40,7 @@ def fetch_and_process_insights(ad_account_obj, fields, params):
         
         # Procesamos cada fila de la respuesta
         for insight in insights:
-            # Tu lógica original para procesar las conversiones
+            # Tu lógica para procesar las conversiones
             conversions = sum([int(action['value']) for action in insight.get('actions', []) if action['action_type'] == 'onsite_conversion.post_save'])
             roas = float(insight.get('purchase_roas', [{}])[0].get('value', 0.0)) if insight.get('purchase_roas') else 0.0
 
