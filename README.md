@@ -104,10 +104,10 @@ En caso que esta rutina de extracción la vayas a realizar desde un computador e
 * Busca en el Icono de Inicio "Variables del Entorno del Sistema"
 * Haz clic en "Nueva"
 * Procede a Rgistrar cada una de las variables del entorno que usaremos en el Script
-* **APP_ID** = 'TU_APP_ID' 
-* **APP_SECRET** = 'TU_APP_SECRET' 
-* **ACCESS_TOKEN** = 'TU_TOKEN_PERMANENTE_DEL_USUARIO_DEL_SISTEMA' 
-* **AD_ACCOUNT_ID** = 'act_TU_ID_DE_CUENTA_PUBLICITARIA' # ¡Importante el prefijo 'act_'!
+    * **APP_ID** = 'TU_APP_ID'
+    * **APP_SECRET** = 'TU_APP_SECRET'
+    * **ACCESS_TOKEN** = 'TU_TOKEN_PERMANENTE_DEL_USUARIO_DEL_SISTEMA'
+    * **AD_ACCOUNT_ID** = 'act_TU_ID_DE_CUENTA_PUBLICITARIA' # ¡Importante el prefijo 'act_'!
 
 ### 2. Crear el Script "extractor.py":
 Crea un archivo "extractor.py" en la misma carpeta. Copia el Script que tendras en mi repositorio de Github en el mismo hay comentarios que te ayudaran a entender el desarrollo del Script. 
